@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayush</title>
+<meta name="description" content="Ayush — full-stack developer building web, mobile and desktop apps, AI agents and data pipelines.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Ayush — Full-stack developer · AI agents">
+<meta property="og:description" content="Experience, projects, research and recognition.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ayush-e4.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: one narrow left-aligned column; name, one line, a plain list of work. Nothing else. */
+  :root {
+    --bg: #fbfbfa;
+    --fg: #141414;
+    --muted: #6b6b68;
+    --rule: #e6e6e2;
+    --accent: #2f5bd3;
+    --tag: #f0f0ec;
+    --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111211; --fg: #ececea; --muted: #8f8f8a; --rule: #262725; --accent: #8fa9ff; --tag: #1c1d1b;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111211; --fg: #ececea; --muted: #8f8f8a; --rule: #262725; --accent: #8fa9ff; --tag: #1c1d1b;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 400 16px/1.6 var(--sans);
+    padding: 0 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 620px;
+    margin: 0 auto;
+    padding-block: 96px 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+  }
+  a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color .15s, color .15s; }
+  a:hover { color: var(--accent); border-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  header { display: flex; flex-direction: column; gap: 14px; }
+  h1 {
+    margin: 0;
+    font-size: clamp(44px, 9vw, 64px);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
+  .role { margin: 0; font-family: var(--mono); font-size: 13px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+  .intro { margin: 6px 0 0; font-size: 19px; line-height: 1.55; max-width: 34em; text-wrap: pretty; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 6px; font-size: 15px; }
+
+  section { display: flex; flex-direction: column; gap: 4px; }
+  h2 { margin: 0 0 12px; font-family: var(--mono); font-size: 13px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+
+  .work { list-style: none; margin: 0; padding: 0; }
+  .work li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px 16px;
+    padding-block: 22px;
+    border-top: 1px solid var(--rule);
+  }
+  .work li:last-child { border-bottom: 1px solid var(--rule); }
+  .name { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+  .name a { border-bottom-color: transparent; }
+  .name a:hover { border-bottom-color: var(--accent); }
+  .meta { font-family: var(--mono); font-size: 12px; color: var(--muted); align-self: baseline; white-space: nowrap; }
+  .desc { grid-column: 1 / -1; margin: 0; color: var(--fg); max-width: 36em; text-wrap: pretty; min-width: 0; }
+  .stack { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .stack span { font-family: var(--mono); font-size: 12px; padding: 2px 8px; border-radius: 4px; background: var(--tag); color: var(--muted); }
+  code { font-family: var(--mono); font-size: 13.5px; background: var(--tag); padding: 1px 6px; border-radius: 4px; }
+
+  footer { font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+  @media (max-width: 480px) {
+    main { padding-block: 56px 48px; gap: 56px; }
+    .intro { font-size: 17px; }
+    .work li { grid-template-columns: 1fr; }
+    .meta { white-space: normal; }
+  }
+  @media (prefers-reduced-motion: reduce) { a { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Ayush</h1>
+    <p class="role">Full-stack developer · AI agents</p>
+    <p class="intro">I build full-stack products and AI systems, from web, mobile and desktop apps to agents and data pipelines. Right now I'm working on one of India's first agentic payment systems.</p>
+    <div class="links">
+      <a href="https://github.com/Ayush-e4">GitHub ↗</a>
+    </div>
+  </header>
+
+  <section aria-labelledby="exp-h">
+    <h2 id="exp-h">Experience</h2>
+    <ul class="work">
+      <li>
+        <p class="name">Agentic payments, travel concierge</p>
+        <span class="meta">Current</span>
+        <p class="desc">Building one of India's first agentic payment systems, letting an AI travel concierge handle bookings and payments on a traveller's behalf.</p>
+      </li>
+      <li>
+        <p class="name">Freelance engineer</p>
+        <span class="meta">Freelance</span>
+        <p class="desc">Designed and shipped software for clients end to end: full-stack web applications, mobile apps, desktop apps, websites, AI agents and data pipelines.</p>
+        <div class="stack"><span>Full-stack apps</span><span>Mobile</span><span>Desktop</span><span>Websites</span><span>AI agents</span><span>Data pipelines</span></div>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="work-h">
+    <h2 id="work-h">Selected work</h2>
+    <ul class="work">
+      <li>
+        <p class="name">gem</p>
+        <span class="meta">In progress</span>
+        <p class="desc">Anonymous voice, image and text notes left at real-world places. You can see a note is there, but you can only open it by walking to it. No accounts, no profiles.</p>
+        <div class="stack"><span>TypeScript</span><span>Next.js</span><span>Fastify</span><span>PostgreSQL + PostGIS</span></div>
+      </li>
+      <li>
+        <p class="name">Wayback</p>
+        <span class="meta">In progress</span>
+        <p class="desc">Turns a Google Maps Timeline export into a short vertical film: a dark globe with a glowing line across everywhere you went that year. It runs entirely in the browser, so your location history never leaves your device.</p>
+        <div class="stack"><span>TypeScript</span><span>Next.js</span><span>OffscreenCanvas</span><span>Web Workers</span></div>
+      </li>
+      <li>
+        <p class="name"><a href="https://github.com/Ayush-e4/apprentice">Apprentice ↗</a></p>
+        <span class="meta">Hacktoberfest 2026</span>
+        <p class="desc">An OpenAI-compatible gateway where a small local model answers first, a judge checks the answer, and a large model steps in only when the check fails. Past answers become examples, so the small model handles more requests over time.</p>
+        <div class="stack"><span>Python</span><span>Ollama</span><span>Qwen3 1.7B</span><span>SQLite</span></div>
+      </li>
+      <li>
+        <p class="name"><a href="https://github.com/Ayush-e4/axiomdb">axiomdb ↗</a></p>
+        <span class="meta">On PyPI</span>
+        <p class="desc">Cache, queue and scheduler in a single SQLite file: what you would normally reach for Redis and Celery to do, with zero servers and zero dependencies. Install with <code>pip install axiomdb</code>.</p>
+        <div class="stack"><span>Python</span><span>SQLite</span><span>stdlib only</span></div>
+      </li>
+      <li>
+        <p class="name"><a href="https://github.com/Ayush-e4/cryptlog">cryptlog ↗</a></p>
+        <span class="meta">v0.1.0</span>
+        <p class="desc">A tamper-evident, append-only log. Every entry carries the SHA-256 hash of the one before it, so if anyone changes a single byte, verification shows exactly where.</p>
+        <div class="stack"><span>Rust</span><span>SHA-256 hash chains</span><span>CLI + library</span></div>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="rec-h">
+    <h2 id="rec-h">Research &amp; recognition</h2>
+    <ul class="work">
+      <li>
+        <p class="name">Paper, CATS Workshop</p>
+        <span class="meta">2026</span>
+        <p class="desc">Selected for the CATS Workshop with a published paper, the only paper from India.</p>
+      </li>
+      <li>
+        <p class="name">Program Committee Member, AIED</p>
+        <span class="meta">2026</span>
+        <p class="desc">Program committee for AIED 2026, the International Conference on Artificial Intelligence in Education.</p>
+      </li>
+      <li>
+        <p class="name">Winner, Hacktoberfest</p>
+        <span class="meta">2026</span>
+        <p class="desc">Won Hacktoberfest 2026 in Mumbai.</p>
+      </li>
+      <li>
+        <p class="name">Delegate, Harvard HPAIR</p>
+        <span class="meta">Harvard</span>
+        <p class="desc">Delegate at the Harvard Project for Asian and International Relations.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="edu-h">
+    <h2 id="edu-h">Education</h2>
+    <ul class="work">
+      <li>
+        <p class="name">BS in Data Science and Applications</p>
+        <span class="meta">IIT Madras</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Ayush</span>
+    <a href="https://github.com/Ayush-e4">github.com/Ayush-e4</a>
+  </footer>
+</main>
+</body>
+</html>
